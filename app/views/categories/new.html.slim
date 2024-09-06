@@ -1,0 +1,12 @@
+.container.mt-5
+  .row
+    .col-md-8.offset-md-2
+      .card
+        .card-body
+          h1.card-title.mb-4.text-center.bg-info.p-3
+           New Category
+
+          = render "form", category: @category
+
+          .mt-4.text-center
+            = link_to "Back to Categories", categories_path, class: "btn btn-outline-primary btn-lg"

@@ -1,0 +1,13 @@
+
+p style="color: green" = notice
+
+h2.text-center.font-weight-bold All categories
+
+#categories
+  - @category.each do |category|
+  
+    == render category
+   
+a.btn.btn-primary.m-3 href=new_category_path
+      | New category
+

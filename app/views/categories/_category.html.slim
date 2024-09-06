@@ -1,0 +1,13 @@
+div.container.p-3 id="#{dom_id category}"
+
+.card[style="width: 18rem;"]
+  img.card-img-top[src="https://www.tmaker.my/wp-content/uploads/2022/12/custom-printing-tshirt-design-nho1100-basil.png" alt="Card image cap"]
+  .card-body
+    h5.card-title
+       = category.title
+    p.card-text
+       = category.description
+    a.btn.btn-primary href=category_path(category)
+      | Show category
+      
+ 

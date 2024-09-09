@@ -1,0 +1,8 @@
+
+
+h1
+  | <%= @product.name %>
+
+p
+  | Category: <%= @category.title %>
+|  <%= link_to 'Back to Products', category_products_path(@category), class: 'btn btn-secondary' %>

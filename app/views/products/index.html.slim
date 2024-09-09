@@ -1,0 +1,7 @@
+h1
+  | Products in <%= @category.title %>
+ul
+  |  <% @products.each do |product| %> 
+  li
+    |  <%= link_to product.name, category_product_path(@category, product) %> 
+  |  <% end %> 

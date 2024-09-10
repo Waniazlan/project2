@@ -1,0 +1,7 @@
+= form_with(model: [@room, @message], local: true) do |form|
+  .field
+    = form.label :content
+    = form.text_area :content, rows: 4
+  .actions
+    = form.submit 'Create Message'
+

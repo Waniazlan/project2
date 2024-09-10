@@ -1,0 +1,17 @@
+p style="color: green" = notice
+
+h1 Rooms
+
+.container
+      h1 Chat Room
+      
+
+
+ 
+#rooms
+  - @rooms.each do |room|
+    == render room
+    p
+      = link_to "Show this room", room
+
+= link_to "New room", new_room_path

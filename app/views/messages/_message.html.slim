@@ -1,4 +1,6 @@
-div id="#{dom_id message}"
+#message
   p
     strong message Content:
     =< message.content
+    strong
+    =< message.created_at.strftime('%H:%M') %>:

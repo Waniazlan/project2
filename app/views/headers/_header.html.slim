@@ -1,0 +1,30 @@
+nav.bg-gray-800
+  .container.mx-auto.flex.items-center.justify-between.px-4
+    .text-white.text-2xl.font-bold
+      a href="/" LOGO
+
+    .hidden.md:flex.space-x-4
+      a.text-white.hover:bg-gray-700.px-3.py-3.rounded-xl.no-underline[href="/categories/new"]
+        | Category
+      a.text-white.hover:bg-gray-700.px-3.py-3.rounded-xl.no-underline[href="/rooms"]
+        | Rooms
+      a.text-white.hover:bg-gray-700.px-3.py-3.rounded-xl.no-underline[href="/"]
+        | Home
+     
+
+    .md:hidden.flex.items-center
+      button.bg-gray-700.text-white.px-3.py-2.rounded
+        span.h-6.w-6.block.bg-white
+         
+
+    .md:hidden.flex.flex-col.absolute.top-0.left-0.w-full.bg-gray-800.mt-12.text-center
+      a.text-white.hover:bg-gray-700.px-3.py-2.rounded-xl.no-underline.mx-5[href="/categories/new"]
+        | Category
+      a.text-white.hover:bg-gray-700.px-3.py-2.rounded-xl.no-underline.mx-5[href="/rooms"]
+        | Rooms
+      a.text-white.hover:bg-gray-700.px-3.py-2.rounded-xl.no-underline.mx-5[href="/"]
+        | Home
+      a.text-white.hover:bg-gray-700.px-3.py-2.rounded-xl.no-underline.mx-5[href="#"]
+        | Another
+
+      

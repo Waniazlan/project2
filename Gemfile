@@ -24,6 +24,7 @@ gem "redis", ">= 4.0.1"
 gem 'responders', '~> 3.0'
 gem "hotwire-rails"
 
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -60,3 +61,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "tailwindcss-rails", "~> 2.7"

@@ -1,14 +1,12 @@
-div.container.p-3  id="#{dom_id category}"
-
-.card[style="width: 12rem;"] 
-  img.card-img-top[src="https://www.tmaker.my/wp-content/uploads/2022/12/custom-printing-tshirt-design-nho1100-basil.png" alt="Card image cap"]
-  .card-body
-    h5.card-title
-       = category.title
-    p.card-text
-       = category.description
-    a.btn.btn-primary href=category_products_path(category_id: category.id)
-       | Show products
+.px-3.py-2.rounded-sm.mx-auto id="#{dom_id category}"
+.grid.grid-col-3.gap-2[style="width: 12rem;"] 
+   .p-2.bg-white.border.border-gray-200.shadow-md.rounded-md
+      img.card-img-top[src="https://www.tmaker.my/wp-content/uploads/2022/12/custom-printing-tshirt-design-nho1100-basil.png" alt="Card image cap"]
+      .card-body
+         p.text-lg.font-semibold.text-center
+            = category.title
+         a.btn.btn-primary.mx-auto href=category_products_path(category_id: category.id)
+            | Show products
 
 
 

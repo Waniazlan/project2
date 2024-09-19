@@ -1,0 +1,10 @@
+h5 Add product
+
+= form_with model: [ @category, @category.products.build ] do |form|
+  p
+    = form.label :name
+    br
+    = form.text_field :name
+  .container
+    p.bg-blue-300.px-3.py-2.rounded-xl.hover:bg-blue-400.mx-auto.text-center
+      = form.submit 

@@ -1,7 +1,5 @@
-h1
-  | Products in <%= @category.title %>
-ul
-  |  <% @products.each do |product| %> 
-  li
-    |  <%= link_to product.name, category_product_path(@category, product) %> 
-  |  <% end %> 
+h2.bg-blue.text-center.py-4.px-3.rounded-xl Product 
+= render @category.products
+
+.container 
+= render "products/form", category: @category

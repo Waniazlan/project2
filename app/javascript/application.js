@@ -1,14 +1,15 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
-import "popper"
-import "bootstrap"
+import "@hotwired/turbo-rails";
+import "controllers";
+import "popper";
+import "bootstrap";
 
-const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".menubar");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector("button");
+  const mobileMenu = document.querySelector(".md:hidden.flex.flex-col");
 
-const toggleNav = () => {
-  navbar.classList.toggle("active");
-  mobileNav.classList.toggle("hamburger-active");
-};
-mobileNav.addEventListener("click", () => toggleNav());import "channels"
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+import "@hotwired/turbo-rails";

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
 
   def index
@@ -9,6 +9,7 @@ class CategoriesController < ApplicationController
 
   def show
     respond_with(@category)
+    @products = @category.products
   end
 
   def new

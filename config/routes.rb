@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "categories#index"
+  
   resources :rooms do
     resources :messages
   end

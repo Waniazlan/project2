@@ -1,0 +1,17 @@
+.div.px-3.py-2.rounded-sm.mx-auto
+  .grid.grid-cols-3.gap-3
+    - @category.products.each do |product|
+      .p-2.bg-white.border.border-gray-200.shadow-md.rounded-md
+        .bg-cover.bg-center
+          - image_url = "https://cdn.pgmall.my/image/cache/catalog/seller_store/store23467/product/0072302001656125072da43a6e437fd4c299c9848671cf5d491-400x400.jpg"
+          .h-40.bg-cover.bg-center(style="background-image: url('#{image_url}');")
+        .px-2.py-3.mx-auto
+          p.text-lg.font-semibold.text-center
+            = product.name
+      
+            
+
+
+
+
+

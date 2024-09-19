@@ -5,11 +5,13 @@ class ProductsController <ApplicationController
     # end
 
     def show
-      if @category
-        @product = @category.products.find(params[:id])
-      else
-        redirect_to categories_path, alert: "Category not found."
-      end
+      @category = Category.find(params[:category_id])
+     @product = @category.products.find(params[:id])
+      # if @category
+      #   @product = @category.products.find(params[:id])
+      # else
+      #   redirect_to categories_path, alert: "Category not found."
+      # end
       end
     
       def new
@@ -20,10 +22,16 @@ class ProductsController <ApplicationController
       def create
     
         @category  =Category.find(params[:category_id])
-        @product = @category.products.build(params[:product])
-        flash[:notice] = 'Product was successfully created'. if @product.save
-        respond_with(@category, @product, status:201)
+        @product = @category.products.create(product_params)
+        redirect_to category_path(@category)
         
+      end
+
+      def destroy
+        @category = Category.find(params[:category_id])
+        @product = @Category.products.find(params[:id])
+        @product.destroy
+        redirect_to category_path(@category), status: :see_other
       end
 
     

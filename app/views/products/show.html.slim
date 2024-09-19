@@ -1,8 +1,7 @@
+h2 Comments
 
+- @category.products.each do |product|
+  p
+    strong name:
+    = product.name
 
-h1
-  | <%= @product.name %>
-
-p
-  | Category: <%= @category.title %>
-|  <%= link_to 'Back to Products', category_products_path(@category), class: 'btn btn-secondary' %>
